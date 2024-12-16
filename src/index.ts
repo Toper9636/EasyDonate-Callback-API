@@ -24,7 +24,7 @@ export namespace EasyDonate {
         sales: any; // В этом проекте это не важно
     }
     export interface Payment {
-        payment_id: string;
+        payment_id: number;
         cost: number;
         customer: string;
         email: string;
@@ -78,20 +78,20 @@ export async function main() {
 
     // Обработка POST-запроса от EasyDonate
     app.post('/easydonate/handler', async (req, res) => {
-        const { payment_id, cost, customer, signature } = req.body;
+        const paymentData: EasyDonate.Payment = req.body;
         
         // Генерация сигнатуры
-        const generatedSignature = EasyDonate.CallbackAPI.generateSignature(payment_id, cost, customer);
+        const generatedSignature = EasyDonate.CallbackAPI.generateSignature(paymentData.payment_id, paymentData.cost, paymentData.customer);
 
         // Проверка сигнатуры
-        if (generatedSignature !== signature) {
-            console.log(`Bad signature: ${generatedSignature} !== ${signature}`);
+        if (generatedSignature !== paymentData.signature) {
+            console.log(`Bad signature: ${generatedSignature} !== ${paymentData.signature}`);
             res.status(400).send('Bad signature.');
             return;
         }
 
         // Ваша логика обработки платежа здесь
         res.send('OK');
-        console.log(`Payment ${payment_id} processed (+${cost} RUB from ${customer})`);
+        console.log(`Платеж #${paymentData.payment_id} прошел успешно (+${paymentData.cost} RUB от ${paymentData.customer})`);
     });
 }
