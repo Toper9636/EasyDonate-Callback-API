@@ -29,7 +29,14 @@ $ npm run start
 $ npm run build_and_start
 ```
 
-### Пример обработчика
+### Другая информация
+
+URL указаный по умолчанию, на который должны приходить оповещения (Только POST запросы)
+```txt
+http://127.0.0.1:8081/easydonate/handler
+```
+
+## Пример обработчика
 
 ```typescript
 import express from 'express';
