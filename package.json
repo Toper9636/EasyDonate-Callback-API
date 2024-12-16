@@ -7,10 +7,7 @@
   "bin": "dist/index-starter.js",
   "scripts": {
     "build_and_start": "tsc&&node dist/index-starter.js",
-    "build": "tsc",
-    "start": "ts-node src/index-starter.ts",
-    "start_dist": "node dist/index-starter.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node src/index-starter.ts"
   },
   "keywords": [
     "easydonate",
