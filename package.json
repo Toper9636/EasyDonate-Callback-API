@@ -1,0 +1,36 @@
+{
+  "name": "easydonate-callback-api",
+  "version": "1.0.0",
+  "description": "Example код для взаимодействия с callback-api от easydonate",
+  "main": "dist/index-starter.js",
+  "types": "dist/index.d.ts",
+  "bin": "dist/index-starter.js",
+  "scripts": {
+    "build_and_start": "tsc&&node dist/index-starter.js",
+    "build": "tsc",
+    "start": "ts-node src/index-starter.ts",
+    "start_dist": "node dist/index-starter.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "easydonate",
+    "callback-api",
+    "typescript",
+    "express",
+    "nodejs",
+    "api",
+    "example"
+  ],
+  "author": "Toper9636",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "tslib": "^2.8.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0"
+  }
+}

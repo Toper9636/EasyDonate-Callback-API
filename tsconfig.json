@@ -1,0 +1,22 @@
+{
+    "exclude": ["node_modules"],
+    "include": ["src/**/*"],  
+    "compilerOptions": {
+        "target": "es2017",
+        "module": "CommonJS",
+        "lib": ["es2017", "dom"],
+        "moduleResolution": "Node",
+        "alwaysStrict": true,
+        "noImplicitAny": true,
+        "strictNullChecks": true,
+        "noImplicitThis": true,
+        "resolveJsonModule": true,
+        "inlineSourceMap": true,
+        "importHelpers": true,
+        "experimentalDecorators": true,
+        "outDir": "dist",
+        // Generate d.ts files
+        "declaration": true,
+        "esModuleInterop": true,
+    }
+}
