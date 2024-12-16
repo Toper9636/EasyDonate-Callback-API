@@ -1,7 +1,7 @@
 {
   "name": "easydonate-callback-api",
   "version": "1.0.0",
-  "description": "Example код для взаимодействия с callback-api от easydonate",
+  "description": "Example код для взаимодействия с Callback API от easydonate",
   "main": "dist/index-starter.js",
   "types": "dist/index.d.ts",
   "bin": "dist/index-starter.js",
