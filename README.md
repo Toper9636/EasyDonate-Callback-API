@@ -31,7 +31,7 @@ require('dotenv').config();
 
 const API_KEY = process.env.EASYDONATE_API_KEY || ``;
 
-export namespace EasyDonate {
+namespace EasyDonate {
     export interface SentCommand {
         command: string;
         response: string;
